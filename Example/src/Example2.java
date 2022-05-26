@@ -11,28 +11,27 @@ public class Example2 {
 		 *  (합계)
 		 *  힌.반복문 안에 있으면 안됨. 반복문안에 조건문이 있으면 안됩니다...........
 		 *  */
+		// 2단 90값 나와야댐..
 		
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("구구단에 대한 숫자를 입력하세요");
-		
-		int a = 1 ; // 반복문 사용
-		int b;
-		int user ;  // 유저 입력
-		int to1 = 1;    // 총 금액 
-		do {
-			user = sc.nextInt();
-			to1 = user * 1 ;
-			
-			a++;
-		}while (a<=9) ;
-		
-		
-		
-		System.out.println();
-				
-		
-	}
+	Scanner sc = new Scanner(System.in);
+	System.out.println("구구단에 대한 숫자를 입력하세요");
+	int gu = sc.nextInt() ;
+	
+	int a = 1;    //기초	
+	int to =0 ;
+    int to1 ;
+ do {  
+	    to += (gu * a) ;
+	      a++;
+}while(a<=9) ;
+    if (to %2 == 0) {
+    	System.out.println("짝수 입니다. " ) ;
+    	}
+    
+    else  {
+      System.out.println("홀수 입니다. ");
+    }
+  sc.close()
+}}
 
-}
 
