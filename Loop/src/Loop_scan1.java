@@ -19,7 +19,7 @@ public class Loop_scan1 {
 	    }
                 aa.close();		//Á¾·á
 		
-		
+		aa.close();
 
 	}
 
