@@ -11,7 +11,7 @@ public class If_while1 {
 		while (a <= 30) {
 			if (a % 2 == 1) {
 				if (a > 20) {
-					// System.out.println(a); // 출력
+				System.out.println(a); // 출력
 				}
 			}
 			a++;
@@ -35,3 +35,6 @@ public class If_while1 {
 	}
 
 }
+
+
+

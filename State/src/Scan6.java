@@ -72,7 +72,9 @@ public class Scan6 {
 	}
      } 
 		
-	
+     
+       mid.close();
+	 mpass.close();
 	
 	}
 	

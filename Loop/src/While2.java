@@ -46,7 +46,19 @@ public class While2 {
 		 
 		 * */
 		
-		
+		 int a1 = 3 ;
+
+		 int b1 = 1 ;
+
+		 int c1 ;
+	 
+		 while ( b1 <= 7) {
+			 c1 = (b1 * a1 ) + 1 ;
+			 System.out.println(c1);
+			 b1 ++ ;
+		 }
+		 
+			 
 		
 		
 		

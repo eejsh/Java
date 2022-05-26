@@ -19,7 +19,7 @@ public class Example2 {
 	
 	int a = 1;    //기초	
 	int to =0 ;
-    int to1 ;
+
  do {  
 	    to += (gu * a) ;
 	      a++;
@@ -31,7 +31,10 @@ public class Example2 {
     else  {
       System.out.println("홀수 입니다. ");
     }
-  sc.close()
+    
+    
+  sc.close();
+  
 }}
 
 

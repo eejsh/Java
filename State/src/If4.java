@@ -34,6 +34,7 @@ public class If4 {
 	*/
 	 
 		
+	 a.close();
 	}
 
 	

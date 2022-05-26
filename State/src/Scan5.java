@@ -83,7 +83,7 @@ public class Scan5 {
 	
 		}
 		
-	
+	qa.close();
 
 	}
 }
