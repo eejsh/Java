@@ -28,6 +28,9 @@ public class Example1 {
 			}
 
 		System.out.println("총 금액은 "+total+"입니다.");
+		
+		sc.close();
+	
 	}
 
 }
