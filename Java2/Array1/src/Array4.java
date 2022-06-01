@@ -22,6 +22,10 @@ public class Array4 {
          System.out.println(Arrays.toString(names));   //위에서 다시 설정한 새 배열값을 전체적으로 출력해주는변수. arrays.toString(a)
          
 		
+     	//	Arrays.toString(null)  Arrays(유틸)  / 숫자, 문자, 소수  = 현재 배열 변수값을 출력해주는 함수.
+         
+         
+         
 	}
 
 }
