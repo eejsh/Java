@@ -6,7 +6,7 @@ public class Method6 {
 
 		insert i = new insert();
 		
-		String userid = "admin";
+	//	String userid = "admin";
 		String skey = "1123234";
 				
 	  String result = i.checks(skey);

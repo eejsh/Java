@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Method7 {
 
 	public static void main(String[] args) {
@@ -17,7 +15,7 @@ class apink {
 	// class안에 필드라 부름
 	// private선언은 class 필드에서 생성해야 합니다.
 	private String nm;
-	private int age;
+//	private int age;
 	private String email; 
 	
 	private String email_cp;
