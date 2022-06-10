@@ -4,31 +4,32 @@ public class Test7 {
 
 	public static void main(String[] args) {
 		
-		System.out.println("¹ø¿ªÇÏ°í »ö»óÀ» ÇÑ±Û·Î Ç¥±â ÇÏ½Ê½Ã¿À [»¡°­, ÁÖÈ², ³ë¶û, ÃÊ·Ï]");
+		System.out.println("ë²ˆì—­í•˜ê³  ìƒ‰ìƒì„ í•œê¸€ë¡œ í‘œê¸° í•˜ì‹­ì‹œì˜¤ [ë¹¨ê°•, ì£¼í™©, ë…¸ë‘, ì´ˆë¡]");
 		
 		Scanner sc = new Scanner(System.in);
 		String user = sc.next();
 		String msg = "";
 		
 		switch(user) {
-		case  "»¡°­" :{
+		case  "ë¹¨ê°•" :{
 		    msg = "Red";	
 			break;
 		}
-		case "ÁÖÈ²" :{
+		case "ì£¼í™©" :{
 		    msg = "Orange";	
 			break;
 		}		
-		case"³ë¶û" :{
+		case"ë…¸ë‘" :{
 		    msg = "Yellow";	
 			break;
 		}
-		case "ÃÊ·Ï" :{
+		case "ì´ˆë¡" :{
 			msg = "Green";
 		  break;
 		}
 		default : {
-			msg = "ÇØ´ç ´Ü¾î´Â ¹ø¿ªÀÌ µÇÁö ¾Ê½À´Ï´Ù.";
+			msg = "í•´ë‹¹ ë‹¨ì–´ëŠ” ë²ˆì—­ì´ ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.";
+		break;
 		}
 			}
 		System.out.println(msg);
