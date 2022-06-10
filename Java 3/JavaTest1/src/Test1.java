@@ -6,7 +6,7 @@ public class Test1 {
 		
 		
 		
-	    System.out.println("on, off Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+	    System.out.println("on, off ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 
 		Scanner sc = new Scanner(System.in);
 		String user = sc.next();
@@ -19,12 +19,34 @@ public class Test1 {
 			msg = "false";
 			}
 		else {
-			msg=" Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù";
+			msg=" ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤";
 		}
 		System.out.println(msg);
 	
 		sc.close();
 	
 	}
-
 }
+
+  //í’€ì´
+/*
+	    System.out.println("on, off ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+
+		Scanner sc = new Scanner(System.in);
+		String user = sc.next();
+		String msg = "";
+		boolean ok = false;
+		
+		
+		if(user.equals("on")) {
+			ok = true;
+			msg = "true";
+			}
+		else {
+			msg = "false";			
+		}
+	  	System.out.println(msg);
+	
+		sc.close();
+	
+*/
