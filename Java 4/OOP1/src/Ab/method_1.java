@@ -1,38 +1,38 @@
 package Ab;
 
-//method_1a.java ¶û °áÇÕ
-public class method_1 extends ide_mth1 {       // main Å¬·¡½º¸¦ extends ide_mth1 ¹­À¸¸é ab2_method·Î ²ø°í°¨
-	//package Ab2¿¡¼­ import ÇÒ ¼ö ÀÖµµ·Ï ÇÏ¸ç, ¿Üº¸Å¬·¡½ºµµ µ¿ÀÏÇÏ°Ô ¸ğµÎ °¡Á®¿À°Ô ÇÔ.
+//method_1a.java ë‘ ê²°í•©
+public class method_1 extends ide_mth1 {       // main í´ë˜ìŠ¤ë¥¼ extends ide_mth1 ë¬¶ìœ¼ë©´ ab2_methodë¡œ ëŒê³ ê°
+	//package Ab2ì—ì„œ import í•  ìˆ˜ ìˆë„ë¡ í•˜ë©°, ì™¸ë³´í´ë˜ìŠ¤ë„ ë™ì¼í•˜ê²Œ ëª¨ë‘ ê°€ì ¸ì˜¤ê²Œ í•¨.
 	
 
-	public void recall() {                 // Ab2 ÆĞÅ°Áö¿Í °øÀ¯¼³Á¤ ¸Ş¼Òµå
+	public void recall() {                 // Ab2 íŒ¨í‚¤ì§€ì™€ ê³µìœ ì„¤ì • ë©”ì†Œë“œ
 		System.out.println("test");
 	}
-	protected static void name(){          //protected + staticÀ» Àû¿ëÇØ¾ß¸¸ Ab2ÆĞÅ°Áö¿Í °øÀ¯°¡µÊ.
-		System.out.println("È«±æµ¿");
+	protected static void name(){          //protected + staticì„ ì ìš©í•´ì•¼ë§Œ Ab2íŒ¨í‚¤ì§€ì™€ ê³µìœ ê°€ë¨.
+		System.out.println("í™ê¸¸ë™");
 	}
 	
 	public static void main(String[] args) {
-		//  Arrays.sort : ¹è¿­ ¿À¸§Â÷¼ø Á¤·Ä (¼ıÀÚ,ÇÑ±Û,¿µ¹®)
-		//  ´Ü, ¿µ¹®ÀÏ °æ¿ì ´ë¹®ÀÚ°¡ Á¦ÀÏ ¸ÕÀú ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÕ´Ï´Ù. ex(APPLE , apple)
+		//  Arrays.sort : ë°°ì—´ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ (ìˆ«ì,í•œê¸€,ì˜ë¬¸)
+		//  ë‹¨, ì˜ë¬¸ì¼ ê²½ìš° ëŒ€ë¬¸ìê°€ ì œì¼ ë¨¼ì € ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•©ë‹ˆë‹¤. ex(APPLE , apple)
 		
 		
 	/*	int number_data[] = {5,7,1,4,9,2};
-		Arrays.sort(number_data);  //¿À¸§Â÷¼øÀ¸·Î ÀÎµ¦½º Á¤·Ä
+		Arrays.sort(number_data);  //ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì¸ë±ìŠ¤ ì •ë ¬
 		System.out.println(Arrays.toString(number_data)); */
 		
-	/*	String user_data[] = {"È«±æµ¿","ÀÌ¼ø½Å","Àåº¸°í","±èÀ¯½Å","jang","apple","Apple","1"};
-		Arrays.sort(user_data);        // ÇÑ±Ûµµ ¤¡¤¤¤§... ¼øÀ¸·Î Á¤·Ä °¡´É.
+	/*	String user_data[] = {"í™ê¸¸ë™","ì´ìˆœì‹ ","ì¥ë³´ê³ ","ê¹€ìœ ì‹ ","jang","apple","Apple","1"};
+		Arrays.sort(user_data);        // í•œê¸€ë„ ã„±ã„´ã„·... ìˆœìœ¼ë¡œ ì •ë ¬ ê°€ëŠ¥.
 		System.out.println(Arrays.toString(user_data)); */
 	
 		
-		/*º¯¼ö¸¦ 2°³ »ı¼ºÇØ¼­ ÇÏ³ª´Â ¹®ÀÚ, ¼ıÀÚ
-		 * ÇöÀç °¡ÀÔµÈ »ç¿ëÀÚ¿¡ ¾ÆÀÌµğ¸¦ È®ÀÎ ÈÄ ÇØ´ç Æ÷ÀÎÆ®°¡ Àû¸³µÇµµ·Ï ÇÕ´Ï´Ù.
-		 * ´Ü, ±âÁ¸ Æ÷ÀÎÆ® + Àû¸³±İ Æ÷ÀÎÆ®¿¡ ´ëÇÑ °á°ú¸¦ Ãâ·ÂÇÏ¼Å¾ß ÇÕ´Ï´Ù.
-		 * Ãâ·ÂÀº ¸ŞÀÎ class¿¡¼­ »ç¿ëÇÔ.
+		/*ë³€ìˆ˜ë¥¼ 2ê°œ ìƒì„±í•´ì„œ í•˜ë‚˜ëŠ” ë¬¸ì, ìˆ«ì
+		 * í˜„ì¬ ê°€ì…ëœ ì‚¬ìš©ìì— ì•„ì´ë””ë¥¼ í™•ì¸ í›„ í•´ë‹¹ í¬ì¸íŠ¸ê°€ ì ë¦½ë˜ë„ë¡ í•©ë‹ˆë‹¤.
+		 * ë‹¨, ê¸°ì¡´ í¬ì¸íŠ¸ + ì ë¦½ê¸ˆ í¬ì¸íŠ¸ì— ëŒ€í•œ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ì…”ì•¼ í•©ë‹ˆë‹¤.
+		 * ì¶œë ¥ì€ ë©”ì¸ classì—ì„œ ì‚¬ìš©í•¨.
 		 * 
 		 * 
-		 * ¹è¿­ µ¥ÀÌÅÍ :   String member_ship [][]= {
+		 * ë°°ì—´ ë°ì´í„° :   String member_ship [][]= {
 	  	       {"kim", "park", "seo", "oh", "lee", "jang", "jeong","cho", "ha","hwang"},
 	  	       {"1500", "800", "2000", "1000", "4200", "2200", "3000", "500", "1000", "1800"} };
 		
@@ -40,7 +40,7 @@ public class method_1 extends ide_mth1 {       // main Å¬·¡½º¸¦ extends ide_mth1
 		
 		 String a = "park";                //800 + 2000 = 2800
 		 int b = 2000;
-		 // String c = "°¨¼Ò";  		 
+		 // String c = "ê°ì†Œ";  		 
 		 
          ide_mth1 m1 = new ide_mth1();
          m1.setter(a, b);
@@ -69,19 +69,19 @@ public ide_mth1() {
 	
 }
 @Override
-public void setter(String data1, int data2) {   // ÇØ´ç ¸Ş¼Òµå Àû¿ë..        method_1a abstract-°¡Á®¿À±â. ¹İº¹¹®..?
+public void setter(String data1, int data2) {   // í•´ë‹¹ ë©”ì†Œë“œ ì ìš©..        method_1a abstract-ê°€ì ¸ì˜¤ê¸°. ë°˜ë³µë¬¸..?
 
 	this.data1 = data1;
 	this.data2 = data2;
-//	if(this.data3.equals("Áõ°¨") {
+//	if(this.data3.equals("ì¦ê°") {
 //		this.loops();               
 //	}
 //	
-//	else {       this.loops2();    "°¨¼Ò." ¼ö½Ä.  }
+//	else {       this.loops2();    "ê°ì†Œ." ìˆ˜ì‹.  }
 
-	this.loops(this.data1, this.data2, this.ea);   	// data1,data2¸¦ loops·Î ³Ñ±è
+	this.loops(this.data1, this.data2, this.ea);   	// data1,data2ë¥¼ loopsë¡œ ë„˜ê¹€
 } 
-public void loops(String a, int b, int c) {                     //½ÇÁ¦ ¸¸µç ¸Ş¼Òµå      // static¾²¸é this »ç¿ë¸øÇÔ.
+public void loops(String a, int b, int c) {                     //ì‹¤ì œ ë§Œë“  ë©”ì†Œë“œ      // staticì“°ë©´ this ì‚¬ìš©ëª»í•¨.
 
 	int w = 0;
 	while(w<c) {
@@ -92,60 +92,17 @@ public void loops(String a, int b, int c) {                     //½ÇÁ¦ ¸¸µç ¸Ş¼Ò
 		
 	   }  w++;		
 	}
-	this.msg ="Áõ°¨";
+	this.msg ="ì¦ê°";
 	}
 @Override
 public void setter(int data3[]) {
 }
 
 @Override
-public String getter() {  // »ç¿ëÀÚ ÀÌ¸§ÀÌ¶û Æ÷ÀÎÆ® ÇÕ»ê ÇØ¼­°°ÀÌ º¸³»±âÀ§ÇØ StringÀ¸·Î ¹ŞÀ½.
-	String print = this.data1 + "´Ô Æ÷ÀÎÆ®°¡ " +  this.total+ " " + this.msg + " µÇ¾ú½À´Ï´Ù." ;
+public String getter() {  // ì‚¬ìš©ì ì´ë¦„ì´ë‘ í¬ì¸íŠ¸ í•©ì‚° í•´ì„œê°™ì´ ë³´ë‚´ê¸°ìœ„í•´ Stringìœ¼ë¡œ ë°›ìŒ.
+	String print = this.data1 + "ë‹˜ í¬ì¸íŠ¸ê°€ " +  this.total+ " " + this.msg + " ë˜ì—ˆìŠµë‹ˆë‹¤." ;
 	return print;
 
    }
 }
 
-
-//class ide_mth1 extends mth1 {
-//	private String member_ship [][];
-//	private String user;
-//	private int userpo;
-//    private int total = 0;
-//	
-//	
-//	@Override
-//	public void setter(String data1, int data2) {   //method_1a abstract-°¡Á®¿À±â. ¹İº¹¹®..?
-//	
-//	 this.user = data1;
-//	 this.userpo = data2;
-//	};
-//	@Override
-//	public void setter(int data3[]) {
-//	this.member_ship = new String [][]
-//		 {
-//		 {"kim", "park", "seo", "oh", "lee", "jang", "jeong","cho", "ha","hwang"},
-//		 {"1500", "800", "2000", "1000", "4200", "2200", "3000", "500", "1000", "1800"} };
-//		
-//		 int ea1 = this.member_ship.length;
-//		 int ea2 = this.member_ship[0].length; 
-//			 int w = 0;
-//		 
-//		 while(w < ea2 ) {
-//			 int ww = 0;
-//			 while(ww< ea1) {
-//			if(this.user.equals(this.member_ship)) {
-//				this.total=Integer.parseInt(this.member_ship[1][ww]) + this.userpo;
-//			}ww++;
-//			 }
-//			 w++;
-//		 }
-//		 
-//	};
-//	@Override
-//	public String getter() {
-//   String po = this.total + this.userpo +"ÀÔ´Ï´Ù.";
-//		return po;
-//	};
-//	
-//}
