@@ -4,23 +4,20 @@ public class Time3 {
 	public static void main(String[] args) {
 
 		/*
-		 * try { //->¸Ş¼Òµå ¾È¿¡ ÀÖÀ½ ¹Ù·Î ÀÛµ¿°¡´É. System.out.println("¼ö¾÷½ÃÀÛ"); Thread.sleep(5000);
-		 * System.out.println("¼ö¾÷Á¾·á");
+		 * try { //->ë©”ì†Œë“œ ì•ˆì— ìˆìŒ ë°”ë¡œ ì‘ë™ê°€ëŠ¥. System.out.println("ìˆ˜ì—…ì‹œì‘"); Thread.sleep(5000);
+		 * System.out.println("ìˆ˜ì—…ì¢…ë£Œ");
 		 * 
 		 * } catch (InterruptedException a) { System.out.println(a); }
 		 */
 
 		/*
-		 * ÀÀ¿ë¹®Á¦ ¿ÜºÎ class°¡ ÀÖ½À´Ï´Ù. ´Ü, ¸ŞÀÎclass¿¡¼­ ÇØ´ç ¿ÜºÎ class¸¦ ·ÎµåÇÕ´Ï´Ù. 8ÃÊµ¿¾È
-		 * "Ã³¸®ÁßÀÔ´Ï´Ù.... Àá½Ã¸¸ ±â´Ù·Á ÁÖ¼¼¿ä." ÇØ´ç ¸Ş¼Òµå¿¡¼­ Áï°¢ÀûÀ¸·Î 8ÃÊµ¿¾È ·ÎµùÀÌ ¹ß»ıÇÕ´Ï´Ù. 8ÃÊ ÀÌÈÄ¿¡ returnÀ¸·Î
-		 * "ÀÔ±İÀÌ ¸ğµÎ Ã³¸® µÇ¾ú½À´Ï´Ù" ¶ó´Â ¹®ÀÚ¸¦ ¹Şµµ·Ï ÇÏ½Ê½Ã¿À.
+		 * ì‘ìš©ë¬¸ì œ ì™¸ë¶€ classê°€ ìˆìŠµë‹ˆë‹¤. ë‹¨, ë©”ì¸classì—ì„œ í•´ë‹¹ ì™¸ë¶€ classë¥¼ ë¡œë“œí•©ë‹ˆë‹¤. 8ì´ˆë™ì•ˆ
+		 * "ì²˜ë¦¬ì¤‘ì…ë‹ˆë‹¤.... ì ì‹œë§Œ ê¸°ë‹¤ë ¤ ì£¼ì„¸ìš”." í•´ë‹¹ ë©”ì†Œë“œì—ì„œ ì¦‰ê°ì ìœ¼ë¡œ 8ì´ˆë™ì•ˆ ë¡œë”©ì´ ë°œìƒí•©ë‹ˆë‹¤. 8ì´ˆ ì´í›„ì— returnìœ¼ë¡œ
+		 * "ì…ê¸ˆì´ ëª¨ë‘ ì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤" ë¼ëŠ” ë¬¸ìë¥¼ ë°›ë„ë¡ í•˜ì‹­ì‹œì˜¤.
 		 */
    bank b = new bank();
    b.bankmoney();
-		
-//		
-//   ABC A = NEW ABC();
-//   SYSTEM.OUT.PRINTLN(A.RUN());
+
    
 	}
 
@@ -30,42 +27,19 @@ class bank {
 	
 public void bankmoney () {
 	try {
-	//	System.out.println("Ã³¸®ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·Á ÁÖ¼¼¿ä..");
-		System.out.println("test1");
-		int c = 10/0;
+		System.out.println("ì²˜ë¦¬ì¤‘ì…ë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë ¤ ì£¼ì„¸ìš”..");
+//		System.out.println("test1");
+//		int c = 10/0;
 		Thread.sleep(1000);
-		System.out.println("test2");
-//		String kkk = this.msg();
-//		System.out.println(kkk);
+//		System.out.println("test2");
+		String kkk = this.msg();
+		System.out.println(kkk);
 	}catch(InterruptedException a) {
-		System.out.println("test3");
-//		System.out.println(a);
+//		System.out.println("test3");
+		System.out.println(a);
 	}
 }}
 
 
-//public String msg () {
-//	return "ÀÔ±İÀÌ ¸ğµÎ Ã³¸®µÇ¾ú½À´Ï´Ù.";
-//}
-//}
-//
-//
-//
-//class abc {
-//	private String msg = "";
-//
-//	public void tca() {
-//		try {
-//            this.msg = "Ã³¸®Áß ÀÔ´Ï´Ù..... Àá½Ã¸¸ ±â´Ù·Á ÁÖ¼¼¿ä.";
-//            System.out.println(msg);
-//			Thread.sleep(8000);
-//		} catch (InterruptedException a) {
-//			System.out.println(a);
-//		}
-//		this.msg = "ÀÔ±İÀÌ ¸ğµÎ Ã³¸®µÇ¾ú½À´Ï´Ù.";
-//       
-//	}
-//	public String run() {
-//		return this.msg;
-//	}
-//}
+public String msg () {
+	return "ì…ê¸ˆì´ ëª¨ë‘ ì²˜ë¦¬ë˜ì—ˆìŠµë‹ˆë‹¤.";
