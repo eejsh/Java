@@ -1,9 +1,9 @@
 /*awt6_
  * 
- * ÀÎÁõ¹øÈ£ ¹ß¼Û ½Ã½ºÅÛ. -- 4°³ÀÇ ¹øÈ£ 0~9 ·£´ı
- * ÀÎÁõ¹øÈ£°¡ ¿Ã¹Ù¸¥Áö ¾Æ¹«°Íµµ ÀÔ·Â¾ÈÇÏ¸é ÀÎÁõ¹øÈ£¸¦ ³ÖÀ¸¼¼¿ä..
- *¹öÆ° ¸ÕÀú ´­·¯¾ßµÊ.
- *pc°¡ »ÌÀº ¹øÈ£´Â console·Î
+ * ì¸ì¦ë²ˆí˜¸ ë°œì†¡ ì‹œìŠ¤í…œ. -- 4ê°œì˜ ë²ˆí˜¸ 0~9 ëœë¤
+ * ì¸ì¦ë²ˆí˜¸ê°€ ì˜¬ë°”ë¥¸ì§€ ì•„ë¬´ê²ƒë„ ì…ë ¥ì•ˆí•˜ë©´ ì¸ì¦ë²ˆí˜¸ë¥¼ ë„£ìœ¼ì„¸ìš”..
+ *ë²„íŠ¼ ë¨¼ì € ëˆŒëŸ¬ì•¼ë¨.
+ *pcê°€ ë½‘ì€ ë²ˆí˜¸ëŠ” consoleë¡œ
  **/
 
 public class awt6 {
@@ -19,7 +19,7 @@ class numcheck extends awt6_abstract {
 	private int pcnum;
 
 	@Override
-	public int oknumber(int numbers) { // ÀÎÁõ¹øÈ£ ¹ŞÀ½.
+	public int oknumber(int numbers) { // ì¸ì¦ë²ˆí˜¸ ë°›ìŒ.
 		this.pcnum = numbers;
 		System.out.println(pcnum);
 		return this.pcnum;
@@ -32,10 +32,6 @@ class numcheck extends awt6_abstract {
 			
 	}
 
-	@Override
-	public int userok(int userck) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 }
