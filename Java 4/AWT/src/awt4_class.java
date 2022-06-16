@@ -51,7 +51,7 @@ protected int a;
 			    }
 
 			}
-		});
+		});  //¿©±â±îÂ¡..
 
 		closebtn.addActionListener(new ActionListener() {  //´Ý±â¹öÆ°
 
