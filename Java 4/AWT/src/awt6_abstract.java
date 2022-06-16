@@ -1,114 +1,109 @@
-//ÀÎÁõ¹øÈ£½Ã½ºÅÛ - awt6.java ¿¬°è
+
+//ì¸ì¦ë²ˆí˜¸ì‹œìŠ¤í…œ - awt6.java ì—°ê³„
 import java.awt.*;
 import java.awt.event.*;
 
 public abstract class awt6_abstract {
 
-   public abstract int oknumber(int numbers);    //ÀÎÁõ¹øÈ£ ¸®ÅÏ getter
-   
-   public abstract int userok(int userck); //ÀÎÁõÈ®ÀÎ.
-   public abstract int allok();
-   
-   
-     Frame fr = new Frame();
-     
-     Button bt = null;   //ÀÎÁõ¹øÈ£È®ÀÎ
-     Button bt1 = null;
-     
-     TextField mid = null; //ÀÔ·ÂÄ­
+	public abstract int oknumber(int numbers); // ì¸ì¦ë²ˆí˜¸ ë¦¬í„´ getter
 
-     Label msg = new Label(); //¸Ş¼¼Áö Ãâ·Â
-     Button close = null;
-     
 	
+
+	public abstract int allok();
+
+	Frame fr = new Frame();
+
+	Button bt = null; // ì¸ì¦ë²ˆí˜¸í™•ì¸
+	Button bt1 = null;
+
+	TextField mid = null; // ì…ë ¥ì¹¸
+
+	Label msg = new Label(); // ë©”ì„¸ì§€ ì¶œë ¥
+	Button close = null;
+
 	public void ckframe() {
-		
+
 		this.fr.setBounds(300, 300, 400, 180);
 		this.fr.setLayout(null);
 		this.fr.setVisible(true);
 
-		this.bt = new Button("ÀÎÁõ¹øÈ£¹ß¼Û");
-		this.bt1 = new Button("ÀÎÁõÈ®ÀÎ");
-		this.close = new Button("´İ±â");
+		this.bt = new Button("ì¸ì¦ë²ˆí˜¸ë°œì†¡");
+		this.bt1 = new Button("ì¸ì¦í™•ì¸");
+		this.close = new Button("ë‹«ê¸°");
 		this.mid = new TextField();
-		
-	    this.bt.setBounds(30, 40, 100, 25);
-	    this.bt.setBackground(Color.LIGHT_GRAY);
-	
-	    this.bt1.setBounds(270, 80, 100, 25);    //ÀÎÁõÈ®ÀÎ
-	    this.bt1.setBackground(Color.LIGHT_GRAY);
-		    
-		this.mid.setBounds(30, 80, 140, 25);   //ÀÎÁõ¹øÈ£ ÀÔ·ÂÄ­
-		
+
+		this.bt.setBounds(30, 40, 100, 25);
+		this.bt.setBackground(Color.LIGHT_GRAY);
+
+		this.bt1.setBounds(270, 80, 100, 25); // ì¸ì¦í™•ì¸
+		this.bt1.setBackground(Color.LIGHT_GRAY);
+
+		this.mid.setBounds(30, 80, 140, 25); // ì¸ì¦ë²ˆí˜¸ ì…ë ¥ì¹¸
+
 		this.msg.setBounds(30, 120, 250, 25);
 		this.msg.setBackground(Color.GREEN);
-	
+
 		this.close.setBounds(340, 40, 30, 25);
-	
-		
-		//frame
+
+		// frame
 		this.fr.add(bt);
 		this.fr.add(bt1);
 		this.fr.add(close);
 		this.fr.add(mid);
 		this.fr.add(msg);
-		
-		
+
 		this.click();
-		
+
 	}
-	
-    public void click() {
-    	this.bt.addActionListener(new ActionListener() { //ÀÎÁõ¹øÈ£ ¹ß¼Û.
+
+	public void click() {
+		this.bt.addActionListener(new ActionListener() { // ì¸ì¦ë²ˆí˜¸ ë°œì†¡.
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			
-				int	pc= (int)(Math.random()*10000);
+
+				int pc = (int) (Math.random() * 10000 + 1 - 1000) + 1000;
 				awt6_abstract.this.oknumber(pc);
-				
-		 		
-				
+
 			}
 		});
-    	
-			
-    	this.bt1.addActionListener(new ActionListener() {   //ÀÎÁõÈ®ÀÎ
+
+		this.bt1.addActionListener(new ActionListener() { // ì¸ì¦í™•ì¸
 			@Override
 			public void actionPerformed(ActionEvent e) {
-		 
-				
-			String oo = awt6_abstract.this.mid.getText();
-			int ok = Integer.parseInt(oo);
-			awt6_abstract.this.userok(ok);
+
+				String oo = awt6_abstract.this.mid.getText();
 			
-			int result = allok();
-			if(result == ok) {
-				msg.setText("ÀÎÁõÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-			}
-			else {
-				msg.setText("ÀÎÁõ¹øÈ£¸¦ ´Ù½Ã È®ÀÎÇÏ¼¼¿ä.");
-			}
-
-
 				
+		      try {
+		    	  
+		    	  int ok = Integer.parseInt(oo);
+		    	  awt6_abstract.this.allok();
+		    	  int result = allok();
+		    	  if (result == ok) {
+		    		  msg.setText("ì¸ì¦ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+		    	  } else {
+		    		  msg.setText("ì¸ì¦ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ í™•ì¸í•˜ì„¸ìš”.");
+		    		  
+		      }}
+		      
+		    	  catch(Exception z) {
+		    	  msg.setText("ìˆ«ì 4ìë¦¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ");
+		      }
+		      
 			}
+			
+
 		});
-    	
-    	this.close.addActionListener(new ActionListener() {
-			
+
+		this.close.addActionListener(new ActionListener() {
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				System.exit(0);
 			}
 		});
-    	
-    	
-    	
-    }
 
-	
-	
-	
-	
+	}
+
 }
