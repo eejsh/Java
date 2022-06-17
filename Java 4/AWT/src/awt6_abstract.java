@@ -1,47 +1,47 @@
 
-//ì¸ì¦ë²ˆí˜¸ì‹œìŠ¤í…œ - awt6.java ì—°ê³„
+//ÀÎÁõ¹øÈ£½Ã½ºÅÛ - awt6.java ¿¬°è
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 public abstract class awt6_abstract {
-
-	public abstract int oknumber(int numbers); // ì¸ì¦ë²ˆí˜¸ ë¦¬í„´ getter
-
+	static String pc = "";   //pc random ¸Ş¸ğ¸®¿¡ ¿Ã¸².
 	
+	//setter
+	public abstract void setter(String userno);
 
-	public abstract int allok();
-
+	//getter
+	public abstract void getter() ;
+	
+	
 	Frame fr = new Frame();
-
-	Button bt = null; // ì¸ì¦ë²ˆí˜¸í™•ì¸
+	Button bt = null; // ÀÎÁõ¹øÈ£È®ÀÎ
 	Button bt1 = null;
-
-	TextField mid = null; // ì…ë ¥ì¹¸
-
-	Label msg = new Label(); // ë©”ì„¸ì§€ ì¶œë ¥
+	TextField mid = null; // ÀÔ·ÂÄ­
+	Label msg = new Label(); // ¸Ş¼¼Áö Ãâ·Â
 	Button close = null;
 
-	public void ckframe() {
+	public void design() {
 
 		this.fr.setBounds(300, 300, 400, 180);
 		this.fr.setLayout(null);
 		this.fr.setVisible(true);
 
-		this.bt = new Button("ì¸ì¦ë²ˆí˜¸ë°œì†¡");
-		this.bt1 = new Button("ì¸ì¦í™•ì¸");
-		this.close = new Button("ë‹«ê¸°");
+		this.bt = new Button("ÀÎÁõ¹øÈ£¹ß¼Û");
+		this.bt1 = new Button("ÀÎÁõÈ®ÀÎ");
+		this.close = new Button("´İ±â");
 		this.mid = new TextField();
 
 		this.bt.setBounds(30, 40, 100, 25);
 		this.bt.setBackground(Color.LIGHT_GRAY);
 
-		this.bt1.setBounds(270, 80, 100, 25); // ì¸ì¦í™•ì¸
+		this.bt1.setBounds(270, 80, 100, 25); // ÀÎÁõÈ®ÀÎ
 		this.bt1.setBackground(Color.LIGHT_GRAY);
 
-		this.mid.setBounds(30, 80, 140, 25); // ì¸ì¦ë²ˆí˜¸ ì…ë ¥ì¹¸
+		this.mid.setBounds(30, 80, 140, 25); // ÀÎÁõ¹øÈ£ ÀÔ·ÂÄ­
 
 		this.msg.setBounds(30, 120, 250, 25);
-		this.msg.setBackground(Color.GREEN);
+		this.msg.setBackground(Color.lightGray);
 
 		this.close.setBounds(340, 40, 30, 25);
 
@@ -52,58 +52,173 @@ public abstract class awt6_abstract {
 		this.fr.add(mid);
 		this.fr.add(msg);
 
+		
 		this.click();
-
+		
 	}
 
+	
 	public void click() {
-		this.bt.addActionListener(new ActionListener() { // ì¸ì¦ë²ˆí˜¸ ë°œì†¡.
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
-				int pc = (int) (Math.random() * 10000 + 1 - 1000) + 1000;
-				awt6_abstract.this.oknumber(pc);
-
-			}
-		});
-
-		this.bt1.addActionListener(new ActionListener() { // ì¸ì¦í™•ì¸
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
-				String oo = awt6_abstract.this.mid.getText();
+	
+	this.close.addActionListener(new ActionListener() {
 			
-				
-		      try {
-		    	  
-		    	  int ok = Integer.parseInt(oo);
-		    	  awt6_abstract.this.allok();
-		    	  int result = allok();
-		    	  if (result == ok) {
-		    		  msg.setText("ì¸ì¦ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
-		    	  } else {
-		    		  msg.setText("ì¸ì¦ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ í™•ì¸í•˜ì„¸ìš”.");
-		    		  
-		      }}
-		      
-		    	  catch(Exception z) {
-		    	  msg.setText("ìˆ«ì 4ìë¦¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ");
-		      }
-		      
-			}
-			
-
-		});
-
-		this.close.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+			
 				System.exit(0);
+				
+				
+				System.out.println(e);
 			}
 		});
+		
+	this.bt.addActionListener(new ActionListener() {     //ÀÎÁõ¹øÈ£ ¹ß¼Û
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			//¹İº¹¹®À¸·Î 4ÀÚ¸® ¸¸µé¾î¾ßµÊ..¤Ğ
+		Random ra = new Random();
+	//	System.out.println(pc);
+		pc = "";
+		for(int f=1; f<5; f++) {
+		pc += String.valueOf(ra.nextInt(10));
+		} 
+	
+		
+		}
+	});	
+	
+	this.bt1.addActionListener(new ActionListener() {   //ÀÎÁõÈ®ÀÎ
+	
+		@Override
+		public void actionPerformed(ActionEvent e) {
+		
+			if(awt6_abstract.this.mid.getText().equals("")) {
+				awt6_abstract.this.msg.setText("ÀÎÁõ¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù..");
+				
+			}
+			else {
+				setter(mid.getText());
+				msg.setText(getter());
+			}
+		
 
+			
+			
+			
+		}
+	});	
+		
+		
+		
+		
+		
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+//public abstract class awt6_abstract {
+//
+//	public abstract int oknumber(int numbers); // ÀÎÁõ¹øÈ£ 
+//	public abstract int allok();
+//
+//	Frame fr = new Frame();
+//
+//	Button bt = null; // ÀÎÁõ¹øÈ£È®ÀÎ
+//	Button bt1 = null;
+//
+//	TextField mid = null; // ÀÔ·ÂÄ­
+//
+//	Label msg = new Label(); // ¸Ş¼¼Áö Ãâ·Â
+//	Button close = null;
+//
+//	public void ckframe() {
+//
+//		this.fr.setBounds(300, 300, 400, 180);
+//		this.fr.setLayout(null);
+//		this.fr.setVisible(true);
+//
+//		this.bt = new Button("ÀÎÁõ¹øÈ£¹ß¼Û");
+//		this.bt1 = new Button("ÀÎÁõÈ®ÀÎ");
+//		this.close = new Button("´İ±â");
+//		this.mid = new TextField();
+//
+//		this.bt.setBounds(30, 40, 100, 25);
+//		this.bt.setBackground(Color.LIGHT_GRAY);
+//
+//		this.bt1.setBounds(270, 80, 100, 25); // ÀÎÁõÈ®ÀÎ
+//		this.bt1.setBackground(Color.LIGHT_GRAY);
+//
+//		this.mid.setBounds(30, 80, 140, 25); // ÀÎÁõ¹øÈ£ ÀÔ·ÂÄ­
+//
+//		this.msg.setBounds(30, 120, 250, 25);
+//		this.msg.setBackground(Color.GREEN);
+//
+//		this.close.setBounds(340, 40, 30, 25);
+//
+//		// frame
+//		this.fr.add(bt);
+//		this.fr.add(bt1);
+//		this.fr.add(close);
+//		this.fr.add(mid);
+//		this.fr.add(msg);
+//
+//		this.click();
+//
+//	}
+//
+//	public void click() {
+//		this.bt.addActionListener(new ActionListener() { // ÀÎÁõ¹øÈ£ ¹ß¼Û.
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//
+//				int pc = (int) (Math.random() * 10000 + 1 - 1000) + 1000;
+//				awt6_abstract.this.oknumber(pc);
+//
+//			}
+//		});
+//
+//		this.bt1.addActionListener(new ActionListener() { // ÀÎÁõÈ®ÀÎ
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//
+//				String oo = awt6_abstract.this.mid.getText();
+//			
+//				
+//		      try {
+//		    	  
+//		    	  int ok = Integer.parseInt(oo);
+//		    	  awt6_abstract.this.allok();
+//		    	  int result = allok();
+//		    	  if (result == ok) {
+//		    		  msg.setText("ÀÎÁõÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+//		    	  } else {
+//		    		  msg.setText("ÀÎÁõ¹øÈ£¸¦ ´Ù½Ã È®ÀÎÇÏ¼¼¿ä.");
+//		    		  
+//		      }}
+//		      
+//		    	  catch(Exception z) {
+//		    	  msg.setText("¼ıÀÚ 4ÀÚ¸®¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ");
+//		      }
+//	 	}
+//	});
+//
+//		this.close.addActionListener(new ActionListener() {
+//
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				System.exit(0);
+//			}
+//		});
+//
+//	}
+//
+//}
