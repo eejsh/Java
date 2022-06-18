@@ -4,12 +4,49 @@ public class Example5 {
 
 	public static void main(String[] args) {
 		
+	multi8 m8 = new multi8();
+    m8.gugudan(8);
+	
+	int to = m8.getter();
+	System.out.println("8ë‹¨ ëª¨ë‘ ë”í•œ ê°’  : " +to);
+	
+	}
+
+}
+
+abstract class gogo {
+	
+ public abstract void gugudan(int z);
+ public abstract int getter();
+	
+}
+
+class multi8 extends gogo{
+    int totla = 0;
+    int zz;
+	
+	@Override
+	public void gugudan(int aa) {
+		this.zz = aa;
+		int w =0;
 		
-		/*
-		 * abstract¸¦ ÀÌ¿ëÇÏ¿© ±¸±¸´Ü 8´Ü °á°ú¸¦ ¸ğµÎ ´õÇÑ °á°ú°ªÀ» returnÀ» ¹Ş¾Æ ¸ŞÀÎ¿¡¼­ Ãâ·ÂµÇµµ·Ï ÇÕ´Ï´Ù.
-		 * Èş
-		 * */
+		while(w<=9) {
+		
+			this.totla += ( this.zz * w) ;
+			
+			w++;
+		}
 		
 	}
 
+	@Override
+	public int getter() {
+		
+		return this.totla;
+	}
+	
+	
+	
+	
+	
 }
