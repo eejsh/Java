@@ -1,20 +1,21 @@
 
 public class Time1 {
-/* try~catch ¹® : ¿¹¿ÜÃ³¸® ±â´É ¹®¹ı  */
-// ÀÛµ¿  ¹®Á¦°¡»ı±æ¶§..
+/* try~catch ë¬¸ : ì˜ˆì™¸ì²˜ë¦¬ ê¸°ëŠ¥ ë¬¸ë²•  */
+// ì‘ë™  ë¬¸ì œê°€ìƒê¸¸ë•Œ..
 	public static void main(String[] args) {
 		// 1~10
 
 		int f;
 
 		for (f = 1; f <= 10; f++) {
-			try {    // ¿¹¿Ü ¹ß»ıÇÒ ÄÚµå ¸¦ Àû¿ë.
-				Thread.sleep(1000);  //1000 = 1ÃÊ
-				//Thread.sleep : ÀÏ½ÃÁ¤Áö»óÅÂ
+			try {    // ì˜ˆì™¸ ë°œìƒí•  ì½”ë“œ ë¥¼ ì ìš©.
+				Thread.sleep(1000);  //1000 = 1ì´ˆ
+				//Thread.sleep : ì¼ì‹œì •ì§€ìƒíƒœ
 				
 				System.out.println(f);
 			} catch (InterruptedException e) {  
-				     /*InterruptedException e  ¿¹¿Ü ¹ß»ı °æ¿ì Ã³¸®ÇÏ±â À§ÇÑ ¹®¹ı. */
+				     /*InterruptedException e  ì˜ˆì™¸ ë°œìƒ ê²½ìš° ì²˜ë¦¬í•˜ê¸° ìœ„í•œ ë¬¸ë²•. */
+				// ì‹¤ë¬´ì—ì„  Exception ì‚¬ìš©.
                      
 			}
 		}
