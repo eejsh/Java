@@ -5,21 +5,16 @@ import java.util.Scanner;
 
 abstract class Test1_abstract {
 
-}
 
 class subject{
-	String sub[] = {"±¹¾î","¿µ¾î","¼öÇĞ","°úÇĞ","»çÈ¸"};
-	ArrayList<String> sub1 = new ArrayList<>();
+	String sub[] = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™","ê³¼í•™","ì‚¬íšŒ"};
 	Scanner sc= new Scanner(System.in);
 	ArrayList<String> newsub = new ArrayList<>();
-	int user ;
-	String user2;
-	
-	
-	
+	int user ;   // ì„ íƒì§€ ìˆ«ì...
+	 
 	public void abc() {
 		
-	System.out.println("°ú¸ñÃß°¡[1], °ú¸ñ»èÁ¦[2], °ú¸ñ¸®½ºÆ® È®ÀÎ[3] ¼±ÅÃÇØÁÖ¼¼¿ä.");
+	System.out.println("ê³¼ëª©ì¶”ê°€[1], ê³¼ëª©ì‚­ì œ[2], ê³¼ëª©ë¦¬ìŠ¤íŠ¸ í™•ì¸[3] ì„ íƒí•´ì£¼ì„¸ìš”.");
 	this.user =this.sc.nextInt();
 	
 	if(this.user==1) {
@@ -34,65 +29,100 @@ class subject{
 		
 	}
 	else {
-		System.out.println("¹øÈ£¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä.");
+		System.out.println("ë²ˆí˜¸ë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”.");
 		abc();
 		
 	}
 	
 	}//////
 	
-	public void sub1() {    //°ú¸ñÃß°¡.
+	public void sub1() {    //ê³¼ëª©ì¶”ê°€.
 	
-	System.out.println("Ãß°¡ÇÒ °ú¸ñ¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
-	this.user2 = this.sc.next();
+	System.out.println("ì¶”ê°€í•  ê³¼ëª©ëª…ì„ ì…ë ¥í•˜ì„¸ìš”.");
 	
-	for(;;) {
-	if(this.user2.equals(newsub.get(user))) {
-     System.out.println("µ¿ÀÏÇÑ °ú¸ñ¸íÀÌ ÀÖ½À´Ï´Ù.");
-     sub1();
-     
-	   }
-	else if(!this.user2.equals(user)) {	
-		this.newsub.add(this.user2);
-		
-		System.out.println("Ãß°¡ ÇÏ½Ã°Ú½À´Ï±î? 1:°ú¸ñÃß°¡ , 2:°ú¸ñ»èÁ¦, 3:°ú¸ñ¸®½ºÆ® È®ÀÎ");
-		this.user = sc.nextInt();
-		
-		if(this.user==1) {
-			sub1();
-			
-		}
-		else if(this.user==2) {
-			sub2();
+	String user2;
+	user2 = this.sc.next();
+	int ea = this.sub.length;
+    boolean call = false;
+    
+    for(String aa : this.sub) {
+    	if(aa.contains(user2)) {
+        call = true; }
+    	else if(this.newsub.contains(user2)) {
+            call = false;
+          }
+    	}
+	if(call==true) {
+    		this.newsub.add(user2);
+    	}
+        else if(call==false) {
+          	 System.out.println("ì´ë¯¸ ì¤‘ë³µëœ ê³¼ëª©ëª…ì´ ìˆìŠµë‹ˆë‹¤. ");
+      	     }
+        else {
+        	System.out.println("ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”.");
+        	sub1();
+        	
+        }
 	
-		}
-		else {
-			sub3();
-			
-		}
-	 }
-
+	
+    	System.out.println(" ê³¼ëª© ì¶”ê°€? 1, ë©”ì¸ìœ¼ë¡œ ëŒì•„ê°€ê¸° 2");
+    	this.user = this.sc.nextInt();
+    	if(this.user==1) {
+    	   sub1();
+    	 }else if(this.user==2) {
+    		abc();
+    	 }
+    	 else {
+    		 System.out.println("ì˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤. ë©”ì¸ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
+    		abc();
+    		
+    	 }
+   
+	}	
+	public void sub2() {  //ê³¼ëª©ì‚­ì œ.
+	     
+	  System.out.println("ì‚­ì œí•  ê³¼ëª©ì„ ì„ íƒí•´ ì£¼ì„¸ìš”. " + this.newsub);
+	  
+	  String user3;
+	  boolean call2 = false;
+	  
+	  for(String bb : this.newsub) {
+		  user3 = this.sc.next();
+		  if(this.newsub.contains(user3)) {
+			  call2 = true;
+		  }
+		  else{
+			  System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
+		   sub1();
+		  } 
+		  if(call2==true) {
+			  this.newsub.remove(user3);
+			  System.out.println("ì •ìƒì ìœ¼ë¡œ ì‚­ì œ ë˜ì—ˆìŠµë‹ˆë‹¤.. ");
+		  }
+		    else if(call2==false) {
+			 System.out.println("í•´ë‹¹ ê³¼ëª©ëª…ì´ ì—†ìŠµë‹ˆë‹¤."); 
+			 abc(); }
+		  System.out.println(" ê³¼ëª© ì‚­ì œ ì¶”ê°€? 1, ë©”ì¸ìœ¼ë¡œ ëŒì•„ê°€ê¸° 2 ");
+	    	this.user = this.sc.nextInt();
+	    	if(this.user==1) {
+	    	   sub2();
+	    	 }
+	    	else if(this.user==2) {
+	    		abc();
+	    	 }
+	    	 else {
+	    		 System.out.println("ì˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤. ë©”ì¸ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
+	    	  abc();
+	    	 }
+		  
+	  }
 	}
 	
-		
-	}//////
-	
-	public void sub2() {  //°ú¸ñ»èÁ¦.
-		
-		
-		
-	}//////
-	
-	public void sub3() {  //°ú¸ñ¸®½ºÆ® È®ÀÎ.
-		
+	public void sub3() {  //ê³¼ëª©ë¦¬ìŠ¤íŠ¸ í™•ì¸.
 		
 		System.out.println(this.newsub);
-		
-		
+	    System.exit(0);
 		
 	}///////
-	
-	
-	
 	
 }
