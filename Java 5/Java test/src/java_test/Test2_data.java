@@ -2,6 +2,6 @@ package java_test;
 
 public class Test2_data {
 
-public final String momey[]={"»ç°ú=250","¾çÆÄ=200","¸¶´Ã=700","ÆÄ=2300","ÂüÄ¡Äµ=110","¶ó¸é=850"};
+public final String momey[]={"ì‚¬ê³¼=250","ì–‘íŒŒ=200","ë§ˆëŠ˜=700","íŒŒ=2300","ì°¸ì¹˜ìº”=1100","ë¼ë©´=850"};
  
 }
