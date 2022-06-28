@@ -6,28 +6,34 @@ import java.util.Scanner;
 public class Test2 {
 
 	public static void main(String[] args)  {
-		
-		/*°¢°¢ÀÇ °³´ç °¡°İÀÌ ÀÖ½À´Ï´Ù.
-		ÇØ´ç Àå¹Ù±¸´Ï´Â °¹¼ö¸¸Å­ ÀüÃ¼ °ªÀ» °è»êÇÏ¿© ÃÑ °áÁ¦ ÇÒ ±İ¾×À» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		
-		[°á°úÃâ·Â]
-±¸¸ÅÇÏ½Ã°íÀÚ ÇÏ´Â ÃÑ °áÁ¦ ±İ¾×Àº :  XXXXX ¿ø ÀÔ´Ï´Ù.
-¡Ø °¢°¢ 1°³´ç °¡°İ °ü·Ã »çÇ× ¹è¿­Àº Á÷Á¢ Á¦ÀÛÇÏ½Ã±æ ¹Ù¶ó¸ç, ÇØ´ç ¹è¿­ ±âº»°¡°İ Àı´ë °ªÀÌ º¯ÇÏÁö ¾Ê¾Æ¾ß ÇÕ´Ï´Ù.
-°¢°¢ 1°³´ç °¡°İ °ü·Ã »çÇ×Àº º°µµÀÇ java ÆÄÀÏ¿¡¼­ ·Îµå ÇÏ¿© °¡Á®¿À½Ã±æ ¹Ù¶ø´Ï´Ù.
-		*/
 	basket b = new basket();
-	b.basket_data();
-	System.out.println("ÃÖÁ¾ °áÁ¦ ±İ¾×Àº" + b.total +"ÀÔ´Ï´Ù.");
-	}
-	
-} 
-class basket extends Test2_data{      //Test2_data.java ¿¬°á
-	static int total = 150;   //ÃÖÁ¾Àû ststic¿Ã·ÁµµµÊ
-	public void basket_data() {
-		String user[] = { "»ç°ú=2","¾çÆÄ=1","¸¶´Ã=1","ÆÄ=1","ÂüÄ¡Äµ=6","¶ó¸é=8" };
-System.out.println(Arrays.toString(this.momey));
-	
-	}
+		b.basket();
+		
 
+	}
 
 }
+
+class basket extends home3_1{
+	
+   static int total = 0; // ìµœì¢… ê°’.
+   
+	public void basket() {
+    String user[] = { "ì‚¬ê³¼=2","ì–‘íŒŒ=1","ë§ˆëŠ˜=1","íŒŒ=1","ì°¸ì¹˜ìº”=6","ë¼ë©´=8" };
+	int w=0;
+    int ea = this.momey.length; //6
+    while(w<ea ) {
+      	String data1[] = this.momey[w].split("=");
+    //  	System.out.println(Arrays.toString(datas)) ;
+      	String data2[] = user[w].split("=");
+               
+              int aa = Integer.valueOf(data1[1]);
+              int bb = Integer.valueOf(data2[1]);
+              total += (aa*bb);
+      	w++;
+    }
+        System.out.printf("ì¥ë°”êµ¬ë‹ˆì˜ ì´ ê¸ˆì•¡ì€ %s ì…ë‹ˆë‹¤." ,total);    
+ 		
+	}   
+}
+
