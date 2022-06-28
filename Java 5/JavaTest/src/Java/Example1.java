@@ -9,60 +9,63 @@ public class Example1 {
 
 	public static void main(String[] args) {
 	
-		/* [ÀÀ¿ë¹®Á¦]
-		 * »ç¿ëÀÚ°¡ 6°³ÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ´Â ·Î¶Ç ÇÁ·Î±×·¥ ÀÔ´Ï´Ù.
-		 * ÇÁ·Î¼¼¼­ ½ÃÀÛ ½Ã "¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : " ¶ó°í ÀÔ·ÂÇÕ´Ï´Ù. ÃÑ 6¹øÀÇ ¼ıÀÚ¸¦ ÀÔ·Â¹Ş°Ô µË´Ï´Ù.
-		 * ±×¸®°í lotto.txt °á°ú ÆÄÀÏÀ» ·ÎµåÇÏ¿© »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ª°ú °á°ú¸¦ ºñ±³ÇÏ¿© ¸î°³¸¦ ¸ÂÃè´ÂÁö¸¦ °ËÅäÇÏ´Â ÇÁ·Î±×·¥ ÄÚµå¸¦ ÀÛ¼ºÇÏ½Ã¿À.
-		 * [°á°ú¿¹½Ã]
-		 * ·Î¶Ç °á°ú : ÃÑ 3°³ÀÇ ¹øÈ£¸¦ ¸ÂÃß¼Ì½À´Ï´Ù.
-		 * */
+		/* [ì‘ìš©ë¬¸ì œ]
+		 * ì‚¬ìš©ìê°€ 6ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ëŠ” ë¡œë˜ í”„ë¡œê·¸ë¨ ì…ë‹ˆë‹¤.
+		 * í”„ë¡œì„¸ì„œ ì‹œì‘ ì‹œ "ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” : " ë¼ê³  ì…ë ¥í•©ë‹ˆë‹¤. ì´ 6ë²ˆì˜ ìˆ«ìë¥¼ ì…ë ¥ë°›ê²Œ ë©ë‹ˆë‹¤.
+		 * ê·¸ë¦¬ê³  lotto.txt ê²°ê³¼ íŒŒì¼ì„ ë¡œë“œí•˜ì—¬ ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ê³¼ ê²°ê³¼ë¥¼ ë¹„êµí•˜ì—¬ ëª‡ê°œë¥¼ ë§ì·„ëŠ”ì§€ë¥¼ ê²€í† í•˜ëŠ” í”„ë¡œê·¸ë¨ ì½”ë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤.
+		 * [ê²°ê³¼ì˜ˆì‹œ]
+		 * ë¡œë˜ ê²°ê³¼ : ì´ 3ê°œì˜ ë²ˆí˜¸ë¥¼ ë§ì¶”ì…¨ìŠµë‹ˆë‹¤. */
 
-		lotto lt = new lotto();
-        lt.setter();
-	
-	}
-
-}
-
-class lotto {
-	Scanner sc = null;
-	LinkedList<Integer> k = null;
-	String url ="C:\\Java Test\\JavaTest\\src\\Java\\lotto.txt";
-			
-	public void setter() {
 		try {
-		this.fileload();
+		lotto lo = new lotto();
+		lo.user();
 		}catch(Exception a) {
-			System.out.println(a);
 		}
+
 	}
-	
-	public String getter() {
-		return null;
-		
-	}
-	public void fileload() throws IOException {
-		
+}
+class lotto{
+ArrayList<String> abc = new ArrayList<>();
+ int abcd[] = new int [6];
+	public void ad() throws IOException{
 		try {
-	
-	//	InputStream is = new FileInputStream("°æ·Î")
-		FileInputStream fi = new FileInputStream(this.url); 
-		//	System.out.println(fi.available()); //ASCII ÄÚµå ·Îµå.  abailable ÆÄÀÏ ÀüÃ¼Å©±âÈ®ÀÎ ÇÔ¼ö
-			byte[] temp = new byte[fi.available()];  // ÆÄÀÏ »çÀÌÁî ¼³Á¤.
-	
-			int ea = fi.read(temp);
-		//	System.out.println(fi.read(temp));// -1 :ÀĞÀº°Å È®ÀÎ
-			String test = new String(temp); //string test = new String(temp, "UTF8"), (temp, 0, ea)
-		//	System.out.println(test); //sysout À» ¹İº¹¹® µ¹¸®¸éµÊ.
-			int w=0;
-			
-			
-			
-			
-		}catch(Exception e){
+		FileReader fr = new FileReader("/Users/hwangjiseon/Desktop/java/home/HOME/src/lotto.txt");
+		BufferedReader br = new BufferedReader(fr);
+		int w =0;
+		while(w<6) {
+			String data = br.readLine();
+			this.abc.add(data);
+			this.abcd[w] = Integer.parseInt(this.abc.get(w)); 
+			w++;
+
+		}
+
+		fr.close();   
+		}catch(Exception e) {
 			System.out.println(e);
 		}
-	
+
 	}
-	
+
+	public void user() {
+	System.out.println(Arrays.toString(this.abcd));
+	Scanner sc = new Scanner(System.in);
+	int user = 0;
+	int usernb[] = new int [6];
+	int total = 0;
+
+	for(int f=0; f<6; f++) {
+		System.out.println("6ê°œì˜ ìˆ«ì ì…ë ¥?"+ (f+1) + "íšŒ");	
+		    usernb[f] += sc.nextInt();
+	}
+	sc.close();
+
+       for(int zz=0; zz<6; zz++) {
+    	 for(int oo=0; oo<6; oo++) {
+    	if(usernb[zz]==this.abcd[oo]) {
+    	total++;
+    	    }	 
+    	 }
+     }
+  }
 }
