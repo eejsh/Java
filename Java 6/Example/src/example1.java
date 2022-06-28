@@ -67,7 +67,7 @@ public class example1 {
 		
 		
 		
-		String data[] = { "red", "green", "blue","pink", "orange", "black", "white", "hotpink", "gray" };
+	String data[] = { "red", "green", "blue","pink", "orange", "black", "white", "hotpink", "gray" };
 		
 		ArrayList<String> color = new ArrayList<>();
 		
@@ -76,10 +76,10 @@ public class example1 {
 			word = data[f].length();
 			if(  word >= 6  ) {
 				color.add(data[f]);
+			
 			}
 		}
-		System.out.println(Arrays.asList(color));
-		
+		System.out.println(color);
 		
 		
 	}
