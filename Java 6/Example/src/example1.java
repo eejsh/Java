@@ -17,15 +17,15 @@ public class example1 {
 		System.out.println(al);
 		
 		int number[] = {1,2,3,4};
-		Integer number2[] = { number[0],number[1],number[2],number[3]}; //Integerë¡œ ìˆ˜ë™ë³€í™˜.
+		Integer number2[] = { number[0],number[1],number[2],number[3]}; //Integer·Î ¼öµ¿º¯È¯.
 		
-		ArrayList<Integer> al2 = new ArrayList<>(Arrays.asList(number2));    //ë§í•¨... ìˆ«ìê°€ í†µìë¡œ ë“¤ì–´ê°€ì„œ ì¬ì‚¬ìš© ëª»í•¨.
+		ArrayList<Integer> al2 = new ArrayList<>(Arrays.asList(number2));    //¸ÁÇÔ... ¼ıÀÚ°¡ ÅëÀÚ·Î µé¾î°¡¼­ Àç»ç¿ë ¸øÇÔ.
 		
 		int abc [] = {3,4,7,9,10 };
 		
-		List<Object> al3 = new ArrayList<>(Arrays.asList(abc));  // ë‹¨, objectëŠ” ì „ì²´ 1ê°œì˜ ê°ì²´ë¡œ ì¸ì‹í•˜ê¸° ë•Œë¬¸ì— ë°”ë¡œ ì¶œë ¥í•˜ê¸° í˜ë“¬.
+		List<Object> al3 = new ArrayList<>(Arrays.asList(abc));  // ´Ü, object´Â ÀüÃ¼ 1°³ÀÇ °´Ã¼·Î ÀÎ½ÄÇÏ±â ¶§¹®¿¡ ¹Ù·Î Ãâ·ÂÇÏ±â Èûµë.
 	   
-		Object test = al3.get(0); //int->objectë¡œ ì ìš© ì‹œ ì¬ ë¡œë“œ í•˜ê¸°ê°€ í˜ë“¬..
+		Object test = al3.get(0); //int->object·Î Àû¿ë ½Ã Àç ·Îµå ÇÏ±â°¡ Èûµë..
 		
 		
 		List al5 = new ArrayList<>();
@@ -40,7 +40,7 @@ public class example1 {
 		
 		
 		
-		List al4 = new ArrayList<>();  // ë¹ˆê°’.
+		List al4 = new ArrayList<>();  // ºó°ª.
 		
 		al4.add("A");
 		al4.add(10);
@@ -54,32 +54,20 @@ public class example1 {
 		int check = Integer.parseInt(al4.get(0).toString());
 		System.out.println(check);
 		
-				/* ìˆ™ì œ..
+		
+		/* ¼÷Á¦..
 		 * 
-		 *  arraylistì„ ë¬´ì¡°ê±´ ì´ìš©í•˜ì—¬ ê²°ê³¼ê°’ì„ ì¶œë ¥ ë˜ë„ë¡ í•©ë‹ˆë‹¤.
-		 *  ì›ì‹œë°ì´í„° => { "red", "green", "blue","pink", "orange", "black", "white", "hotpink", "gray" }
-		 *  í•´ë‹¹ ë°ì´í„° ìƒ‰ìƒ ê°’ ì¤‘ 6ì ë¯¸ë§Œì˜ ìƒ‰ìƒë§Œ ëª¨ë‘ ì‚­ì œ í›„ 
-		 *  ê²°ê³¼ ë°°ì—´ ê°’ìœ¼ë¡œ ìƒì„±í•˜ì‹œì˜¤.. 
+		 *  arraylistÀ» ¹«Á¶°Ç ÀÌ¿ëÇÏ¿© °á°ú°ªÀ» Ãâ·Â µÇµµ·Ï ÇÕ´Ï´Ù.
+		 *  ¿ø½Ãµ¥ÀÌÅÍ => { "red", "green", "blue","pink", "orange", "black", "white", "hotpink", "gray" }
+		 *  ÇØ´ç µ¥ÀÌÅÍ »ö»ó °ª Áß 6ÀÚ ¹Ì¸¸ÀÇ »ö»ó¸¸ ¸ğµÎ »èÁ¦ ÈÄ 
+		 *  °á°ú ¹è¿­ °ªÀ¸·Î »ı¼ºÇÏ½Ã¿À.. 
 		 *  orange, hotpink
 		 *  
-		 *  ë‚ ë¦¬ë˜ê°€, ë‹¤ì‹œ ì¬ë°°ì—´ í•˜ë˜ê°€ arraylist ë¡œ ë°°ì—´.
+		 *  ³¯¸®´ø°¡, ´Ù½Ã Àç¹è¿­ ÇÏ´ø°¡ arraylist ·Î ¹è¿­.
 		 *  */
 		
 		
 		
-	String data[] = { "red", "green", "blue","pink", "orange", "black", "white", "hotpink", "gray" };
-		
-		ArrayList<String> color = new ArrayList<>();
-		
-		int word;	
-		for(int f=0; f<data.length; f++) {
-			word = data[f].length();
-			if(  word >= 6  ) {
-				color.add(data[f]);
-			
-			}
-		}
-		System.out.println(color);
 		
 		
 	}
