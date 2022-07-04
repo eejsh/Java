@@ -12,12 +12,14 @@ public class test3 {
 		
 		
 	String oriname = "honggildong";
-	
+
+        String nn[] =oriname.split("");
+        System.out.println(Arrays.toString(nn));
+		
 	int w =0;
 	int ea = oriname.length();
-	//System.out.println(ea);
-	
-	String name[] = new String[11];
+		
+		String name[] = new String[11];
 	for(int f=0; f<=ea; f++) {
 		name = oriname.split("");
 	}
