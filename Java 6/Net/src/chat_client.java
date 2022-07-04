@@ -33,6 +33,7 @@ class client_chat{
     String smsg = null; //서버로 전송하는 메세지
   
     String check = null; // exit 단어체크 
+   
     
 public void chat() {
 /* 각종 stream을 close 하지 않습니다. 
