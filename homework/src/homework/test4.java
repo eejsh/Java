@@ -72,8 +72,8 @@ public void input( ) {
 	 this.userk[p] = this.sc.next();
 
 	 
-	 System.out.println(Arrays.toString(this.usere));
-	 System.out.println(Arrays.toString(this.userk));
+//	 System.out.println(Arrays.toString(this.usere));
+//	 System.out.println(Arrays.toString(this.userk));
    }
 	
     a();
