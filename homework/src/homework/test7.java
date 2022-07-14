@@ -25,8 +25,8 @@ public class test7 {
 				
 			}
 		}
-		t1.run();
-		t2.run();
+		t1.start();
+		t2.start();
 	}
 
 }
